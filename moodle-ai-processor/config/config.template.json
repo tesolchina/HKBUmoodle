@@ -1,0 +1,22 @@
+{
+  "moodle": {
+    "base_url": "https://moddw12-buelearning.hkbu.edu.hk",
+    "token": "your_moodle_token_here",
+    "username": "your_username",
+    "password": "your_password"
+  },
+  "openrouter": {
+    "api_key": "your_openrouter_api_key_here",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "anthropic/claude-3.5-sonnet"
+  },
+  "ai_settings": {
+    "max_tokens": 1000,
+    "temperature": 0.7,
+    "system_prompt": "You are a helpful teaching assistant. Provide constructive feedback and guidance to students."
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/moodle_ai_processor.log"
+  }
+}

@@ -1,0 +1,47 @@
+Sandbox: https://moddw12-buelearning.hkbu.edu.hk
+
+Username: lcadmin
+Password: Lcadm#2025
+
+Username: lcsupport
+Password: LcSupp25!
+
+Token: eac84a6e8c353a7f88f424b14a340df4
+
+Web Service Example:
+
+1. Get course details by Moodle course ID
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_course_get_courses&options[ids][0]=99&moodlewsrestformat=json
+
+2. Get course details by HKBU assigned course ID number
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_course_get_courses_by_field&field=idnumber&value=2024;S2;UCLC1009;1;&moodlewsrestformat=json
+
+3. Get enrolled users in a course
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_enrol_get_enrolled_users&courseid=180&moodlewsrestformat=json
+
+4. Get course contents
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_course_get_contents&courseid=99&moodlewsrestformat=json
+
+5. Hide/show a course section (topic)
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_course_edit_section&id=471&action=hide&moodlewsrestformat=json
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_course_edit_section&id=471&action=show&moodlewsrestformat=json
+
+6. Update cousre section (topic) name
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_update_inplace_editable&component=format_topics&itemtype=sectionname&itemid=471&value=New+Section+One&moodlewsrestformat=json
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_update_inplace_editable&component=format_topics&itemtype=sectionname&itemid=471&value=Topic+1&moodlewsrestformat=json
+
+
+https://moddw12-buelearning.hkbu.edu.hk/webservice/rest/server.php?wstoken=eac84a6e8c353a7f88f424b14a340df4&wsfunction=core_enrol_get_users_courses&userid=3&moodlewsrestformat=json
+
+
+Assign new function
+1. Log in with "lcadmin"
+2. Go to "Site administrator" > Server > External services
+3. Under "Custom services" > "LC Web Services", click "Functions"
+4. Click "Add functions" and select the required functions in the drop-down box
+5. Click "Add functions" to update the system
+
+Available functions list
+1. Log in with "lcadmin"
+2. Go to "Site administrator" > Server > API Documentation
+
