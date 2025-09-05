@@ -205,5 +205,84 @@ cli.add_command(setup)
 cli.add_command(view_results, name='view-results')
 
 
+@click.command()
+@click.option('--format', '-f',
+              type=click.Choice(['markdown', 'forum-post', 'both']),
+              default='both',
+              help='Export format: markdown report, forum post, or both')
+@click.option('--results-file', '-r',
+              help='Specific results file to export (default: latest combined results)')
+def export(format, results_file):
+    """
+    Export processed results in different formats for delivery to Moodle
+    
+    Available formats:
+    - markdown: Detailed report with clearly divided sections
+    - forum-post: Single consolidated post ready for Moodle forum
+    - both: Generate both formats
+    """
+    try:
+        processor = FileProcessor()
+        processed_dir = Path("stage1_manual/processed")
+        
+        # Find results file to export
+        if results_file:
+            results_path = processed_dir / results_file
+        else:
+            # Find latest combined results file
+            combined_files = list(processed_dir.glob("combined_*_results.json"))
+            if not combined_files:
+                click.echo("❌ No combined results files found. Run processing first.")
+                return
+            results_path = max(combined_files, key=lambda f: f.stat().st_mtime)
+        
+        if not results_path.exists():
+            click.echo(f"❌ Results file not found: {results_path}")
+            return
+        
+        # Load results data
+        with open(results_path, 'r', encoding='utf-8') as f:
+            results_data = json.load(f)
+        
+        click.echo(f"📊 Exporting from: {results_path.name}")
+        click.echo(f"🔢 Total files: {results_data.get('total_files', 0)}")
+        
+        exported_files = []
+        
+        if format in ['markdown', 'both']:
+            click.echo("\n📄 Generating markdown report...")
+            markdown_file = processor.export_markdown_feedback(results_data)
+            exported_files.append(markdown_file)
+            click.echo(f"✅ Markdown report: {Path(markdown_file).name}")
+        
+        if format in ['forum-post', 'both']:
+            click.echo("\n📤 Generating forum post...")
+            forum_file = processor.export_consolidated_forum_post(results_data)
+            exported_files.append(forum_file)
+            click.echo(f"✅ Forum post: {Path(forum_file).name}")
+        
+        click.echo(f"\n🎉 Export complete! {len(exported_files)} files generated")
+        click.echo(f"📁 Location: {processed_dir}")
+        
+        if format in ['forum-post', 'both']:
+            click.echo("\n💡 Next steps:")
+            click.echo("   1. Open the forum post HTML file")
+            click.echo("   2. Copy the contents")
+            click.echo("   3. Paste into your Moodle forum as a new post")
+        
+        if format in ['markdown', 'both']:
+            click.echo("\n📋 Markdown report features:")
+            click.echo("   • Complete feedback with expandable sections")
+            click.echo("   • Individual student sections for separate delivery")  
+            click.echo("   • Copy specific sections as needed")
+    
+    except Exception as e:
+        click.echo(f"❌ Export failed: {e}")
+
+
+# Add export command to CLI
+cli.add_command(export)
+
+
 if __name__ == '__main__':
     cli()

@@ -48,6 +48,12 @@ A two-stage tool for processing students' work in Moodle using AI (OpenRouter AP
 - `src/` - Source code modules
   - `moodle_client.py` - Moodle API client
   - `ai_client.py` - OpenRouter AI client
+- `stage1_manual/` - Manual file processing
+- `stage2_automated/` - API automation
+- `docs/` - General documentation
+- `scripts/` - Utility scripts
+
+📋 **For detailed file organization**: See `docs/PROJECT_ORGANIZATION.md`
   - `processor.py` - Main processing logic
 - `tests/` - Unit tests
 - `logs/` - Application logs
