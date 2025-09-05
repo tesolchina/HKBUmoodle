@@ -8,6 +8,7 @@ using AI without direct API integration.
 import os
 import json
 import logging
+import time
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from datetime import datetime
@@ -142,6 +143,68 @@ class FileProcessor:
         
         return None
     
+    def extract_posts_from_json(self, json_content: str) -> Dict[str, Any]:
+        """Extract posts from JSON discussion data, filtering personal information"""
+        try:
+            # Parse JSON content
+            if json_content.strip().startswith('[['):
+                # Handle nested array structure
+                data = json.loads(json_content)[0]  # Get first array element
+            else:
+                data = json.loads(json_content)
+            
+            posts = []
+            personal_info_fields = ['userid', 'userfullname', 'privatereplytofullname']
+            
+            for post_data in data:
+                # Extract safe content (no personal info)
+                safe_post = {
+                    'id': post_data.get('id'),
+                    'discussion': post_data.get('discussion'),
+                    'parent': post_data.get('parent', 0),
+                    'created': post_data.get('created'),
+                    'modified': post_data.get('modified'),
+                    'subject': post_data.get('subject', ''),
+                    'message': post_data.get('message', ''),
+                    'wordcount': post_data.get('wordcount', 0),
+                    'charcount': post_data.get('charcount', 0)
+                }
+                
+                # Clean HTML from message content
+                if safe_post['message']:
+                    soup = BeautifulSoup(safe_post['message'], 'html.parser')
+                    safe_post['clean_message'] = soup.get_text().strip()
+                else:
+                    safe_post['clean_message'] = ''
+                
+                # Convert timestamp if needed
+                if safe_post['created']:
+                    try:
+                        safe_post['created_readable'] = datetime.fromtimestamp(safe_post['created']).isoformat()
+                    except (ValueError, OSError):
+                        safe_post['created_readable'] = safe_post['created']
+                
+                # Only include posts with meaningful content
+                if safe_post['clean_message'] and len(safe_post['clean_message']) > 10:
+                    posts.append(safe_post)
+            
+            print(f"   🔒 Filtered out personal information from {len(data)} posts")
+            print(f"   ✅ Extracted {len(posts)} posts with content")
+            
+            return {
+                'posts': posts,
+                'total_posts': len(posts),
+                'extraction_method': 'json_parsing',
+                'personal_info_filtered': True
+            }
+            
+        except json.JSONDecodeError as e:
+            self.logger.error(f"Error parsing JSON: {e}")
+            return {'error': f'JSON parsing error: {str(e)}'}
+        except Exception as e:
+            self.logger.error(f"Error extracting from JSON: {e}")
+            return {'error': str(e)}
+    
     def extract_text_from_docx(self, file_path: Path) -> Dict[str, Any]:
         """Extract text from Word document"""
         try:
@@ -192,7 +255,41 @@ class FileProcessor:
         
         try:
             # Extract content based on file type
-            if file_path.suffix.lower() == '.html':
+            if file_path.suffix.lower() == '.json':
+                print("   🔍 Extracting content from JSON...")
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    json_content = f.read()
+                extracted_data = self.extract_posts_from_json(json_content)
+                result['extraction'] = extracted_data
+                
+                if 'error' in extracted_data:
+                    result['error'] = extracted_data['error']
+                    return result
+                
+                print(f"   ✅ Found {extracted_data['total_posts']} posts")
+                
+                # Process each post
+                processed_posts = []
+                for i, post in enumerate(extracted_data['posts'], 1):
+                    print(f"\n   📝 Processing post {i}/{len(extracted_data['posts'])}")
+                    print(f"      Subject: {post['subject'][:50]}...")
+                    print(f"      Length: {len(post['clean_message'])} chars")
+                    
+                    ai_response = self._process_content_with_ai(
+                        content=post['clean_message'],
+                        author=f"User_{post['id']}",  # Anonymized reference
+                        processing_type=processing_type
+                    )
+                    processed_posts.append({
+                        'original': post,
+                        'ai_response': ai_response
+                    })
+                    print(f"   ✅ Post {i} processed successfully")
+                
+                result['processed_posts'] = processed_posts
+                print(f"\n✅ JSON processing complete: {len(processed_posts)} posts processed")
+                
+            elif file_path.suffix.lower() == '.html':
                 print("   🔍 Extracting content from HTML...")
                 with open(file_path, 'r', encoding='utf-8') as f:
                     html_content = f.read()
@@ -261,44 +358,60 @@ class FileProcessor:
         
         return result
     
-    def _process_content_with_ai(self, content: str, author: str = None, 
+    def _process_content_with_ai(self, content: str, author: Optional[str] = None, 
                                 processing_type: str = 'feedback') -> Dict[str, Any]:
         """Process content with AI based on processing type"""
         try:
-            print(f"🤖 Processing with AI (type: {processing_type})...")
+            print(f"\n🤖 Starting AI processing...")
+            print(f"   📋 Processing type: {processing_type}")
             if author:
-                print(f"   Author: {author}")
-            print(f"   Content length: {len(content)} characters")
+                print(f"   👤 Author: {author}")
+            print(f"   📝 Content length: {len(content)} characters")
+            print(f"   📊 Content preview: {content[:100]}..." if len(content) > 100 else f"   📊 Content: {content}")
             
             if processing_type == 'feedback':
-                print("   🔍 Analyzing student post...")
+                print("\n   🔍 Step 1/2: Analyzing student post...")
+                print("   🚀 Sending analysis request to AI...")
+                analysis_start = time.time()
                 analysis = self.ai_client.analyze_student_post(content)
-                print("   ✅ Analysis complete")
+                analysis_time = time.time() - analysis_start
+                print(f"   ✅ Analysis complete in {analysis_time:.2f} seconds")
                 
-                print("   💬 Generating reply...")
+                print("\n   💬 Step 2/2: Generating reply...")
+                print("   🚀 Sending reply generation request to AI...")
+                reply_start = time.time()
                 reply = self.ai_client.generate_reply(content, reply_style="supportive")
-                print("   ✅ Reply generated")
+                reply_time = time.time() - reply_start
+                print(f"   ✅ Reply generated in {reply_time:.2f} seconds")
+                
+                total_time = analysis_time + reply_time
+                print(f"\n   🎯 Total AI processing time: {total_time:.2f} seconds")
                 
                 return {
                     'type': 'feedback',
                     'analysis': analysis,
                     'suggested_reply': reply,
-                    'author': author
+                    'author': author,
+                    'processing_time': total_time
                 }
             
             elif processing_type == 'summary':
-                print("   📋 Generating summary...")
+                print("\n   📋 Generating summary...")
                 summary_prompt = f"Please provide a concise summary of this student work:\n\n{content}"
+                print("   🚀 Sending summary request to AI...")
+                summary_start = time.time()
                 summary = self.ai_client.generate_response(
                     summary_prompt,
                     system_prompt="You are an educational assistant. Provide clear, concise summaries."
                 )
-                print("   ✅ Summary complete")
+                summary_time = time.time() - summary_start
+                print(f"   ✅ Summary complete in {summary_time:.2f} seconds")
                 
                 return {
                     'type': 'summary',
                     'summary': summary,
-                    'author': author
+                    'author': author,
+                    'processing_time': summary_time
                 }
             
             elif processing_type == 'grading':
@@ -340,7 +453,7 @@ Provide:
         print(f"📁 Upload directory: {upload_path}")
         
         # Get all supported files
-        supported_extensions = ['.html', '.htm', '.docx', '.doc', '.txt']
+        supported_extensions = ['.html', '.htm', '.docx', '.doc', '.txt', '.json']
         files_to_process = []
         
         for ext in supported_extensions:

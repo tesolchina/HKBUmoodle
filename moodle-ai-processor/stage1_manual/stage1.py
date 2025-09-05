@@ -13,7 +13,7 @@ import json
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from file_processor import FileProcessor
+from stage1_manual.file_processor import FileProcessor
 
 
 @click.group()
@@ -116,7 +116,7 @@ def list_files():
     
     click.echo(f"Files in {upload_dir}:")
     
-    supported = ['.html', '.htm', '.docx', '.doc', '.txt']
+    supported = ['.html', '.htm', '.docx', '.doc', '.txt', '.json']
     
     for file in sorted(files):
         if file.is_file():

@@ -7,6 +7,7 @@ This module provides a client for interacting with OpenRouter API for AI process
 import requests
 import json
 import logging
+import time
 from typing import Dict, Any, List, Optional
 
 
@@ -35,7 +36,7 @@ class OpenRouterClient:
             'X-Title': 'HKBU Moodle AI Processor'
         }
     
-    def generate_response(self, prompt: str, system_prompt: str = None, 
+    def generate_response(self, prompt: str, system_prompt: Optional[str] = None, 
                          max_tokens: int = 1000, temperature: float = 0.7) -> str:
         """
         Generate AI response for a given prompt
@@ -49,8 +50,12 @@ class OpenRouterClient:
         Returns:
             AI-generated response
         """
-        print(f"      🌐 Sending request to {self.model}...")
+        print(f"      🌐 Preparing API request to {self.model}...")
         print(f"      📝 Prompt length: {len(prompt)} characters")
+        print(f"      🎯 Max tokens: {max_tokens}, Temperature: {temperature}")
+        
+        if system_prompt:
+            print(f"      🎭 System prompt length: {len(system_prompt)} characters")
         
         messages = []
         
@@ -72,38 +77,63 @@ class OpenRouterClient:
             "temperature": temperature
         }
         
+        print(f"      🚀 Sending request to OpenRouter API...")
+        start_time = time.time()
+        
         try:
             response = requests.post(
                 f"{self.base_url}/chat/completions",
                 headers=self.headers,
-                json=data
+                json=data,
+                timeout=120  # 2 minute timeout
             )
+            
+            elapsed_time = time.time() - start_time
+            print(f"      ⏱️  Request completed in {elapsed_time:.2f} seconds")
+            
+            print(f"      📡 Response status: {response.status_code}")
             response.raise_for_status()
             
+            print(f"      🔄 Parsing response...")
             result = response.json()
             
             if 'choices' in result and len(result['choices']) > 0:
                 response_text = result['choices'][0]['message']['content'].strip()
-                print(f"      ✅ Received response: {len(response_text)} characters")
+                print(f"      ✅ Successfully received response: {len(response_text)} characters")
                 
                 # Show usage info if available
                 if 'usage' in result:
                     usage = result['usage']
-                    print(f"      📊 Tokens used: {usage.get('total_tokens', 'N/A')} (prompt: {usage.get('prompt_tokens', 'N/A')}, completion: {usage.get('completion_tokens', 'N/A')})")
+                    prompt_tokens = usage.get('prompt_tokens', 'N/A')
+                    completion_tokens = usage.get('completion_tokens', 'N/A')
+                    total_tokens = usage.get('total_tokens', 'N/A')
+                    print(f"      📊 Token usage - Prompt: {prompt_tokens}, Completion: {completion_tokens}, Total: {total_tokens}")
+                    
+                    # Calculate cost if we have pricing info (rough estimate)
+                    if isinstance(total_tokens, int):
+                        cost_estimate = total_tokens * 0.000015  # Rough estimate for Claude
+                        print(f"      💰 Estimated cost: ${cost_estimate:.6f}")
                 
                 return response_text
             else:
+                print(f"      ❌ Unexpected API response format: {result}")
                 self.logger.error(f"Unexpected API response format: {result}")
                 raise Exception("Invalid response format from OpenRouter API")
                 
+        except requests.exceptions.Timeout:
+            print(f"      ⏰ Request timed out after {time.time() - start_time:.2f} seconds")
+            self.logger.error("OpenRouter API request timed out")
+            raise
         except requests.exceptions.RequestException as e:
+            print(f"      ❌ API request failed: {e}")
             self.logger.error(f"OpenRouter API request failed: {e}")
             raise
         except json.JSONDecodeError as e:
+            print(f"      ❌ Failed to parse JSON response: {e}")
             self.logger.error(f"Failed to parse JSON response: {e}")
             raise
     
-    def analyze_student_post(self, post_content: str, context: str = None) -> Dict[str, Any]:
+    def analyze_student_post(self, post_content: str, context: Optional[str] = None) -> Dict[str, Any]:
         """
         Analyze a student post and generate feedback
         
@@ -138,7 +168,7 @@ class OpenRouterClient:
             "model_used": self.model
         }
     
-    def generate_reply(self, student_post: str, discussion_context: str = None, 
+    def generate_reply(self, student_post: str, discussion_context: Optional[str] = None, 
                       reply_style: str = "supportive") -> str:
         """
         Generate a reply to a student post

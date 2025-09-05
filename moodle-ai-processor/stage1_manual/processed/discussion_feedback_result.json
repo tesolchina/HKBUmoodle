@@ -1,0 +1,207 @@
+{
+  "file_name": "discussion.json",
+  "file_path": "/workspaces/HKBUmoodle/moodle-ai-processor/stage1_manual/uploads/discussion.json",
+  "processed_at": "2025-09-05T11:22:34.439052",
+  "processing_type": "feedback",
+  "extraction": {
+    "posts": [
+      {
+        "id": 517619,
+        "discussion": 330974,
+        "parent": 0,
+        "created": 1756990401,
+        "modified": 1757037146,
+        "subject": "\ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div style=\"font-size: 28px; line-height: 1.5; padding: 20px; font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto;\">\r\n<h2 style=\"font-size: 36px; color: #0066cc;\">\ud83d\udd75\ufe0f\u200d\u2640\ufe0f Academic Detective Challenge!</h2>\r\n<p>Hello everyone! \ud83d\udc4b</p>\r\n<p>Welcome to your first <strong>academic research task</strong>! Instead of giving you the direct link, let's practice the essential skill of <strong>finding academic articles</strong> - something you'll do constantly in university.</p>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83d\udcd6 Article A - Basic Information:</h3>\r\n<div style=\"background-color: #f0f8ff; padding: 20px; border-left: 6px solid #0066cc; font-size: 26px;\"><strong>Title:</strong> Supporting schools to use face recognition systems: a continuance intention perspective of elementary school parents in China<br><strong>Authors:</strong> Hong, J. C., Li, Y., &amp; Kuo, S. Y.<br><strong>Year:</strong> 2022<br><strong>Journal:</strong> Education and Information Technologies<br><strong>DOI:</strong> 10.1007/s10639-022-11084-7</div>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83c\udfaf Your Mission:</h3>\r\n<ol style=\"padding-left: 40px;\">\r\n<li><strong>Find the article online</strong> using the information above</li>\r\n<li><strong>Access the full article</strong> (try multiple approaches if needed)</li>\r\n<li><strong>Reply to this post</strong> with:\r\n<ul style=\"padding-left: 40px;\">\r\n<li>The <strong>direct link</strong> you found</li>\r\n<li>What <strong>search strategy</strong> worked for you</li>\r\n<li>What <strong>format options</strong> are available (PDF, HTML, etc.)</li>\r\n<li>Any <strong>access challenges</strong> you encountered</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83d\udca1 Search Strategies to Try:</h3>\r\n<ul style=\"padding-left: 40px;\">\r\n<li>\ud83d\udd0d Google Scholar search with title/authors</li>\r\n<li>\ud83c\udfeb HKBU Library database</li>\r\n<li>\ud83c\udf10 DOI resolver (hint: try <a style=\"color: #1a73e8; text-decoration: underline;\" href=\"https://doi.org\" target=\"_blank\" rel=\"noreferrer noopener\">doi.org</a>)</li>\r\n<li>\ud83d\udcda Direct publisher website search</li>\r\n</ul>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83d\udcda Why Locating and Managing Information Matters:</h3>\r\n<ul style=\"padding-left: 40px;\">\r\n<li><strong>Builds Research Skills:</strong> Locating academic articles hones your ability to navigate scholarly resources, a critical skill for university success.</li>\r\n<li><strong>Supports Academic Success:</strong> Efficiently finding and organizing information ensures you can access key materials for assignments and exams.</li>\r\n<li><strong>Enhances Time Management:</strong> Using systems like <strong>Getting Things Done (GTD)</strong> helps you organize documents in a structured way, reducing stress and improving productivity.</li>\r\n<li><strong>Familiarizes with Library Systems:</strong> Mastering the HKBU Library database and other academic tools prepares you for independent research and lifelong learning.</li>\r\n<li><strong>Centralized Document Storage:</strong> Keep all your academic documents (e.g., PDFs, notes) in a dedicated folder or cloud system like Google Drive or OneDrive, as part of your GTD workflow, for easy access and reference.</li>\r\n</ul>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83e\udd1d Collaboration Encouraged!</h3>\r\n<p><em>If someone finds the link, others can still practice different search methods and share their experiences!</em></p>\r\n</div>",
+        "wordcount": 296,
+        "charcount": 1725,
+        "clean_message": "\ud83d\udd75\ufe0f\u200d\u2640\ufe0f Academic Detective Challenge!\nHello everyone! \ud83d\udc4b\nWelcome to your first academic research task! Instead of giving you the direct link, let's practice the essential skill of finding academic articles - something you'll do constantly in university.\n\ud83d\udcd6 Article A - Basic Information:\nTitle: Supporting schools to use face recognition systems: a continuance intention perspective of elementary school parents in ChinaAuthors: Hong, J. C., Li, Y., & Kuo, S. Y.Year: 2022Journal: Education and Information TechnologiesDOI: 10.1007/s10639-022-11084-7\n\ud83c\udfaf Your Mission:\n\nFind the article online using the information above\nAccess the full article (try multiple approaches if needed)\nReply to this post with:\r\n\nThe direct link you found\nWhat search strategy worked for you\nWhat format options are available (PDF, HTML, etc.)\nAny access challenges you encountered\n\n\n\n\ud83d\udca1 Search Strategies to Try:\n\n\ud83d\udd0d Google Scholar search with title/authors\n\ud83c\udfeb HKBU Library database\n\ud83c\udf10 DOI resolver (hint: try doi.org)\n\ud83d\udcda Direct publisher website search\n\n\ud83d\udcda Why Locating and Managing Information Matters:\n\nBuilds Research Skills: Locating academic articles hones your ability to navigate scholarly resources, a critical skill for university success.\nSupports Academic Success: Efficiently finding and organizing information ensures you can access key materials for assignments and exams.\nEnhances Time Management: Using systems like Getting Things Done (GTD) helps you organize documents in a structured way, reducing stress and improving productivity.\nFamiliarizes with Library Systems: Mastering the HKBU Library database and other academic tools prepares you for independent research and lifelong learning.\nCentralized Document Storage: Keep all your academic documents (e.g., PDFs, notes) in a dedicated folder or cloud system like Google Drive or OneDrive, as part of your GTD workflow, for easy access and reference.\n\n\ud83e\udd1d Collaboration Encouraged!\nIf someone finds the link, others can still practice different search methods and share their experiences!",
+        "created_readable": "2025-09-04T12:53:21"
+      },
+      {
+        "id": 517737,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757054958,
+        "modified": 1757054958,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">I would also encourage students to look into Zotero or Mendeley - these are literature management tools that would be essential for dealing with large amount of literature.</div>",
+        "wordcount": 28,
+        "charcount": 145,
+        "clean_message": "I would also encourage students to look into Zotero or Mendeley - these are literature management tools that would be essential for dealing with large amount of literature.",
+        "created_readable": "2025-09-05T06:49:18"
+      },
+      {
+        "id": 517766,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757061935,
+        "modified": 1757061935,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">I got it by google scholar</div>",
+        "wordcount": 6,
+        "charcount": 21,
+        "clean_message": "I got it by google scholar",
+        "created_readable": "2025-09-05T08:45:35"
+      },
+      {
+        "id": 517769,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757061968,
+        "modified": 1757061968,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">Find the paper online and login via institution by search HKBU</div>",
+        "wordcount": 11,
+        "charcount": 52,
+        "clean_message": "Find the paper online and login via institution by search HKBU",
+        "created_readable": "2025-09-05T08:46:08"
+      },
+      {
+        "id": 517770,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757061983,
+        "modified": 1757061983,
+        "subject": "\ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<p>got it , already own pdf\ud83d\ude07</p>",
+        "wordcount": 6,
+        "charcount": 20,
+        "clean_message": "got it , already own pdf\ud83d\ude07",
+        "created_readable": "2025-09-05T08:46:23"
+      },
+      {
+        "id": 517771,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757062008,
+        "modified": 1757062008,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">search the title online</div>",
+        "wordcount": 4,
+        "charcount": 20,
+        "clean_message": "search the title online",
+        "created_readable": "2025-09-05T08:46:48"
+      }
+    ],
+    "total_posts": 6,
+    "extraction_method": "json_parsing",
+    "personal_info_filtered": true
+  },
+  "processed_posts": [
+    {
+      "original": {
+        "id": 517619,
+        "discussion": 330974,
+        "parent": 0,
+        "created": 1756990401,
+        "modified": 1757037146,
+        "subject": "\ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div style=\"font-size: 28px; line-height: 1.5; padding: 20px; font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto;\">\r\n<h2 style=\"font-size: 36px; color: #0066cc;\">\ud83d\udd75\ufe0f\u200d\u2640\ufe0f Academic Detective Challenge!</h2>\r\n<p>Hello everyone! \ud83d\udc4b</p>\r\n<p>Welcome to your first <strong>academic research task</strong>! Instead of giving you the direct link, let's practice the essential skill of <strong>finding academic articles</strong> - something you'll do constantly in university.</p>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83d\udcd6 Article A - Basic Information:</h3>\r\n<div style=\"background-color: #f0f8ff; padding: 20px; border-left: 6px solid #0066cc; font-size: 26px;\"><strong>Title:</strong> Supporting schools to use face recognition systems: a continuance intention perspective of elementary school parents in China<br><strong>Authors:</strong> Hong, J. C., Li, Y., &amp; Kuo, S. Y.<br><strong>Year:</strong> 2022<br><strong>Journal:</strong> Education and Information Technologies<br><strong>DOI:</strong> 10.1007/s10639-022-11084-7</div>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83c\udfaf Your Mission:</h3>\r\n<ol style=\"padding-left: 40px;\">\r\n<li><strong>Find the article online</strong> using the information above</li>\r\n<li><strong>Access the full article</strong> (try multiple approaches if needed)</li>\r\n<li><strong>Reply to this post</strong> with:\r\n<ul style=\"padding-left: 40px;\">\r\n<li>The <strong>direct link</strong> you found</li>\r\n<li>What <strong>search strategy</strong> worked for you</li>\r\n<li>What <strong>format options</strong> are available (PDF, HTML, etc.)</li>\r\n<li>Any <strong>access challenges</strong> you encountered</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83d\udca1 Search Strategies to Try:</h3>\r\n<ul style=\"padding-left: 40px;\">\r\n<li>\ud83d\udd0d Google Scholar search with title/authors</li>\r\n<li>\ud83c\udfeb HKBU Library database</li>\r\n<li>\ud83c\udf10 DOI resolver (hint: try <a style=\"color: #1a73e8; text-decoration: underline;\" href=\"https://doi.org\" target=\"_blank\" rel=\"noreferrer noopener\">doi.org</a>)</li>\r\n<li>\ud83d\udcda Direct publisher website search</li>\r\n</ul>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83d\udcda Why Locating and Managing Information Matters:</h3>\r\n<ul style=\"padding-left: 40px;\">\r\n<li><strong>Builds Research Skills:</strong> Locating academic articles hones your ability to navigate scholarly resources, a critical skill for university success.</li>\r\n<li><strong>Supports Academic Success:</strong> Efficiently finding and organizing information ensures you can access key materials for assignments and exams.</li>\r\n<li><strong>Enhances Time Management:</strong> Using systems like <strong>Getting Things Done (GTD)</strong> helps you organize documents in a structured way, reducing stress and improving productivity.</li>\r\n<li><strong>Familiarizes with Library Systems:</strong> Mastering the HKBU Library database and other academic tools prepares you for independent research and lifelong learning.</li>\r\n<li><strong>Centralized Document Storage:</strong> Keep all your academic documents (e.g., PDFs, notes) in a dedicated folder or cloud system like Google Drive or OneDrive, as part of your GTD workflow, for easy access and reference.</li>\r\n</ul>\r\n<h3 style=\"font-size: 32px; color: #333;\">\ud83e\udd1d Collaboration Encouraged!</h3>\r\n<p><em>If someone finds the link, others can still practice different search methods and share their experiences!</em></p>\r\n</div>",
+        "wordcount": 296,
+        "charcount": 1725,
+        "clean_message": "\ud83d\udd75\ufe0f\u200d\u2640\ufe0f Academic Detective Challenge!\nHello everyone! \ud83d\udc4b\nWelcome to your first academic research task! Instead of giving you the direct link, let's practice the essential skill of finding academic articles - something you'll do constantly in university.\n\ud83d\udcd6 Article A - Basic Information:\nTitle: Supporting schools to use face recognition systems: a continuance intention perspective of elementary school parents in ChinaAuthors: Hong, J. C., Li, Y., & Kuo, S. Y.Year: 2022Journal: Education and Information TechnologiesDOI: 10.1007/s10639-022-11084-7\n\ud83c\udfaf Your Mission:\n\nFind the article online using the information above\nAccess the full article (try multiple approaches if needed)\nReply to this post with:\r\n\nThe direct link you found\nWhat search strategy worked for you\nWhat format options are available (PDF, HTML, etc.)\nAny access challenges you encountered\n\n\n\n\ud83d\udca1 Search Strategies to Try:\n\n\ud83d\udd0d Google Scholar search with title/authors\n\ud83c\udfeb HKBU Library database\n\ud83c\udf10 DOI resolver (hint: try doi.org)\n\ud83d\udcda Direct publisher website search\n\n\ud83d\udcda Why Locating and Managing Information Matters:\n\nBuilds Research Skills: Locating academic articles hones your ability to navigate scholarly resources, a critical skill for university success.\nSupports Academic Success: Efficiently finding and organizing information ensures you can access key materials for assignments and exams.\nEnhances Time Management: Using systems like Getting Things Done (GTD) helps you organize documents in a structured way, reducing stress and improving productivity.\nFamiliarizes with Library Systems: Mastering the HKBU Library database and other academic tools prepares you for independent research and lifelong learning.\nCentralized Document Storage: Keep all your academic documents (e.g., PDFs, notes) in a dedicated folder or cloud system like Google Drive or OneDrive, as part of your GTD workflow, for easy access and reference.\n\n\ud83e\udd1d Collaboration Encouraged!\nIf someone finds the link, others can still practice different search methods and share their experiences!",
+        "created_readable": "2025-09-04T12:53:21"
+      },
+      "ai_response": {
+        "type": "feedback",
+        "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+      }
+    },
+    {
+      "original": {
+        "id": 517737,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757054958,
+        "modified": 1757054958,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">I would also encourage students to look into Zotero or Mendeley - these are literature management tools that would be essential for dealing with large amount of literature.</div>",
+        "wordcount": 28,
+        "charcount": 145,
+        "clean_message": "I would also encourage students to look into Zotero or Mendeley - these are literature management tools that would be essential for dealing with large amount of literature.",
+        "created_readable": "2025-09-05T06:49:18"
+      },
+      "ai_response": {
+        "type": "feedback",
+        "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+      }
+    },
+    {
+      "original": {
+        "id": 517766,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757061935,
+        "modified": 1757061935,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">I got it by google scholar</div>",
+        "wordcount": 6,
+        "charcount": 21,
+        "clean_message": "I got it by google scholar",
+        "created_readable": "2025-09-05T08:45:35"
+      },
+      "ai_response": {
+        "type": "feedback",
+        "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+      }
+    },
+    {
+      "original": {
+        "id": 517769,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757061968,
+        "modified": 1757061968,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">Find the paper online and login via institution by search HKBU</div>",
+        "wordcount": 11,
+        "charcount": 52,
+        "clean_message": "Find the paper online and login via institution by search HKBU",
+        "created_readable": "2025-09-05T08:46:08"
+      },
+      "ai_response": {
+        "type": "feedback",
+        "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+      }
+    },
+    {
+      "original": {
+        "id": 517770,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757061983,
+        "modified": 1757061983,
+        "subject": "\ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<p>got it , already own pdf\ud83d\ude07</p>",
+        "wordcount": 6,
+        "charcount": 20,
+        "clean_message": "got it , already own pdf\ud83d\ude07",
+        "created_readable": "2025-09-05T08:46:23"
+      },
+      "ai_response": {
+        "type": "feedback",
+        "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+      }
+    },
+    {
+      "original": {
+        "id": 517771,
+        "discussion": 330974,
+        "parent": 517619,
+        "created": 1757062008,
+        "modified": 1757062008,
+        "subject": "Re: \ud83d\udcda1.1 Accessing Article A: Your First Academic Reading Adventure",
+        "message": "<div class=\"text_to_html\">search the title online</div>",
+        "wordcount": 4,
+        "charcount": 20,
+        "clean_message": "search the title online",
+        "created_readable": "2025-09-05T08:46:48"
+      },
+      "ai_response": {
+        "type": "feedback",
+        "error": "401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions"
+      }
+    }
+  ]
+}
