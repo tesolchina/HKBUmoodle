@@ -1,0 +1,16 @@
+# Ignore configuration files containing secrets
+moodle-ai-processor/config/
+
+# Ignore log files
+moodle-ai-processor/logs/
+
+# Ignore processed data files
+moodle-ai-processor/stage1_manual/processed/
+moodle-ai-processor/stage2_automated/results/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/

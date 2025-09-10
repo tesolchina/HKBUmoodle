@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline Feedback Report - Week 1 Section 38</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px;
+        }
+        .summary-box {
+            background: #f8f9fa;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .student-feedback {
+            margin: 30px 0;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .student-header {
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .feedback-content {
+            padding: 20px;
+        }
+        .score-badge {
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            float: right;
+        }
+        .score-badge.low {
+            background: #dc3545;
+        }
+        .score-badge.medium {
+            background: #ffc107;
+            color: #333;
+        }
+        .strengths {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .improvements {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .suggestions {
+            background: #e2e3e5;
+            border: 1px solid #d6d8db;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #495057;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .class-overview {
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .priority-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .next-steps {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .footer {
+            background: #6c757d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 5px;
+            }
+            .header {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Outline Feedback Report</h1>
+            <p>Week 1: Internet Benefits vs Risks - Section 38</p>
+            <p>Generated on {report_date}</p>
+        </div>
+        
+        <div class="content">
+            {content}
+        </div>
+        
+        <div class="footer">
+            <p>💡 Remember: This feedback is designed to help you improve your outline structure and argumentation skills. 
+            Please review the suggestions carefully and apply them to your revised outline.</p>
+            <p><strong>Next steps:</strong> Revise your outline based on this feedback and submit your improved version by the deadline.</p>
+        </div>
+    </div>
+</body>
+</html>
