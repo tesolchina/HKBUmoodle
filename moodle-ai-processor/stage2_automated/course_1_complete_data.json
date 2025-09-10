@@ -1,0 +1,35 @@
+{
+  "course_info": {
+    "id": 1,
+    "shortname": "HKBU Moodle (Sandbox)",
+    "categoryid": 0,
+    "fullname": "HKBU Moodle (Sandbox)",
+    "displayname": "HKBU Moodle (Sandbox)",
+    "summary": "",
+    "summaryformat": 0,
+    "format": "site",
+    "startdate": 0,
+    "enddate": 0,
+    "numsections": 1,
+    "showactivitydates": false,
+    "showcompletionconditions": null
+  },
+  "content_structure": [
+    {
+      "id": 885,
+      "name": "Site",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 1,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    }
+  ],
+  "analysis": {
+    "total_sections": 1,
+    "total_modules": 0,
+    "module_types": {}
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-09-10T16:32:05.120834",
+  "api_function_results": {
+    "core_webservice_get_site_info": "FAILED",
+    "core_course_get_courses": "SUCCESS",
+    "core_course_get_contents": "SUCCESS",
+    "core_course_get_courses_by_field": "SUCCESS",
+    "core_user_get_users_by_field": "FAILED",
+    "core_enrol_get_enrolled_users": "SUCCESS",
+    "core_user_get_course_user_profiles": "FAILED",
+    "mod_forum_get_forums_by_courses": "FAILED",
+    "mod_forum_get_forum_discussions": "FAILED",
+    "mod_forum_get_discussion_posts": "FAILED",
+    "mod_forum_add_discussion_post": "FAILED",
+    "mod_forum_add_discussion": "FAILED",
+    "mod_quiz_get_quizzes_by_courses": "FAILED",
+    "mod_quiz_get_quiz_attempts": "FAILED",
+    "mod_quiz_get_attempt_data": "FAILED",
+    "mod_quiz_save_attempt": "FAILED",
+    "core_course_create_course_section": "FAILED",
+    "core_course_add_module": "FAILED",
+    "core_course_edit_module": "FAILED",
+    "core_course_delete_module": "FAILED",
+    "core_grades_update_grades": "FAILED",
+    "gradereport_user_get_grade_items": "FAILED",
+    "core_grades_get_grades": "FAILED"
+  },
+  "working_functions": [
+    "core_course_get_courses",
+    "core_course_get_contents",
+    "core_course_get_courses_by_field",
+    "core_enrol_get_enrolled_users"
+  ],
+  "failed_functions": [
+    "core_webservice_get_site_info",
+    "core_user_get_users_by_field",
+    "core_user_get_course_user_profiles",
+    "mod_forum_get_forums_by_courses",
+    "mod_forum_get_forum_discussions",
+    "mod_forum_get_discussion_posts",
+    "mod_forum_add_discussion_post",
+    "mod_forum_add_discussion",
+    "mod_quiz_get_quizzes_by_courses",
+    "mod_quiz_get_quiz_attempts",
+    "mod_quiz_get_attempt_data",
+    "mod_quiz_save_attempt",
+    "core_course_create_course_section",
+    "core_course_add_module",
+    "core_course_edit_module",
+    "core_course_delete_module",
+    "core_grades_update_grades",
+    "gradereport_user_get_grade_items",
+    "core_grades_get_grades"
+  ],
+  "test_plan": {
+    "Phase 1: API Function Discovery": {
+      "objective": "Map all available API functions",
+      "method": "Systematic testing of common Moodle web service functions",
+      "timeline": "30 minutes",
+      "priority": "High"
+    },
+    "Phase 2: GUI Content Setup": {
+      "objective": "Create test content via GUI for API testing",
+      "method": "Manual content creation in sandbox course",
+      "timeline": "45 minutes",
+      "priority": "High"
+    },
+    "Phase 3: API Content Reading": {
+      "objective": "Verify API can read GUI-created content",
+      "method": "Use working API functions to read new content",
+      "timeline": "20 minutes",
+      "priority": "High"
+    },
+    "Phase 4: Forum Testing": {
+      "objective": "Test forum reading and writing capabilities",
+      "method": "Create forum posts via GUI, try to read/write via API",
+      "timeline": "30 minutes",
+      "priority": "Critical"
+    },
+    "Phase 5: Quiz Testing": {
+      "objective": "Test quiz creation and grading capabilities",
+      "method": "Create quiz via GUI, try to access via API",
+      "timeline": "30 minutes",
+      "priority": "Medium"
+    }
+  }
+}

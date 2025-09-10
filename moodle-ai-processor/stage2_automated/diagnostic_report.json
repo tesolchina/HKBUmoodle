@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-10",
+  "base_url": "https://moddw12-buelearning.hkbu.edu.hk",
+  "token_preview": "eac84a6e8c...",
+  "results": {
+    "connectivity": true,
+    "token_validity": false,
+    "function_tests": {
+      "core_webservice_get_site_info": "error",
+      "core_course_get_courses": "success",
+      "core_user_get_users_by_field": "error",
+      "core_course_get_contents": "success"
+    },
+    "login_test": true
+  }
+}

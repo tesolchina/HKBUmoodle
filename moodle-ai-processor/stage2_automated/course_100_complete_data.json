@@ -1,0 +1,133 @@
+{
+  "course_info": {
+    "id": 100,
+    "shortname": "UCLC1009 (2) [2024 S2]",
+    "categoryid": 10,
+    "categorysortorder": 60002,
+    "fullname": "UCLC1009 University English II (Section 2) [2024 S2]",
+    "displayname": "UCLC1009 University English II (Section 2) [2024 S2]",
+    "idnumber": "2024;S2;UCLC1009;2;",
+    "summary": "",
+    "summaryformat": 1,
+    "format": "topics",
+    "showgrades": 1,
+    "newsitems": 5,
+    "startdate": 1735660800,
+    "enddate": 0,
+    "numsections": 4,
+    "maxbytes": 0,
+    "showreports": 0,
+    "visible": 1,
+    "hiddensections": 1,
+    "groupmode": 0,
+    "groupmodeforce": 0,
+    "defaultgroupingid": 0,
+    "timecreated": 1741851550,
+    "timemodified": 1741851550,
+    "enablecompletion": 1,
+    "completionnotify": 0,
+    "lang": "",
+    "forcetheme": "",
+    "courseformatoptions": [
+      {
+        "name": "hiddensections",
+        "value": 1
+      },
+      {
+        "name": "coursedisplay",
+        "value": 0
+      }
+    ],
+    "showactivitydates": true,
+    "showcompletionconditions": true
+  },
+  "content_structure": [
+    {
+      "id": 475,
+      "name": "General",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 0,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": [
+        {
+          "id": 95,
+          "url": "https://moddw12-buelearning.hkbu.edu.hk/mod/forum/view.php?id=95",
+          "name": "Announcements",
+          "instance": 95,
+          "contextid": 218,
+          "visible": 1,
+          "uservisible": true,
+          "visibleoncoursepage": 1,
+          "modicon": "https://moddw12-buelearning.hkbu.edu.hk/theme/image.php/boost/forum/1741832143/monologo?filtericon=1",
+          "modname": "forum",
+          "modplural": "Forums",
+          "availability": null,
+          "indent": 0,
+          "onclick": "",
+          "afterlink": null,
+          "activitybadge": [],
+          "customdata": "\"\"",
+          "noviewlink": false,
+          "completion": 0,
+          "downloadcontent": 1,
+          "dates": [],
+          "groupmode": 0
+        }
+      ]
+    },
+    {
+      "id": 476,
+      "name": "Topic 1",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 1,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    },
+    {
+      "id": 477,
+      "name": "Topic 2",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 2,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    },
+    {
+      "id": 478,
+      "name": "Topic 3",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 3,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    },
+    {
+      "id": 479,
+      "name": "Topic 4",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 4,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    }
+  ],
+  "analysis": {
+    "total_sections": 5,
+    "total_modules": 1,
+    "module_types": {
+      "forum": 1
+    }
+  }
+}

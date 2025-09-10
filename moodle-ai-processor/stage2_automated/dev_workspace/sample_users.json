@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "fullname": "Mock Student 1",
+    "email": "student1@mock.hkbu.edu.hk",
+    "roles": [
+      {
+        "shortname": "student"
+      }
+    ],
+    "offline_mode": true
+  },
+  {
+    "id": 2,
+    "fullname": "Mock Teacher",
+    "email": "teacher@mock.hkbu.edu.hk",
+    "roles": [
+      {
+        "shortname": "editingteacher"
+      }
+    ],
+    "offline_mode": true
+  }
+]

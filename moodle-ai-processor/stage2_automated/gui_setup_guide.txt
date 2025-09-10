@@ -1,0 +1,55 @@
+
+🎯 STEP-BY-STEP GUI SETUP FOR API TESTING
+
+1. 📂 ACCESS SANDBOX VIA GUI
+   URL: https://moddw12-buelearning.hkbu.edu.hk/login/index.php
+   Username: lcladmin
+   Password: Lcadm#2025
+   
+2. 🎓 SELECT TEST COURSE
+   Recommended: UCLC1009 University English II (Section 1) [2024 S2]
+   Course ID: 99 (confirmed working via API)
+   
+3. 🏗️  TEST CONTENT CREATION (YOUR REQUIREMENT #1)
+   Via GUI:
+   - Go to course → Turn editing on
+   - Add section: "API Test Section"
+   - Add page: "Test Page Content"
+   - Add forum: "Test Discussion Forum"
+   - Add resource: "Test File/Link"
+   
+   Then via API:
+   - Run our content scanning to see if it appears
+   - Try to read the new content structure
+   - Document IDs for further testing
+   
+4. 💬 TEST FORUM INTERACTION (YOUR REQUIREMENTS #2 & #3)
+   Via GUI:
+   - Create a test discussion post
+   - Add 2-3 student replies (using admin account)
+   - Note discussion ID and post IDs
+   
+   Then via API:
+   - Try mod_forum_get_forum_discussions
+   - Try mod_forum_get_discussion_posts
+   - Try mod_forum_add_discussion_post
+   
+5. 📊 TEST QUIZ FUNCTIONALITY (YOUR REQUIREMENT #4)
+   Via GUI:
+   - Create a simple quiz with 2-3 questions
+   - Take the quiz as a student (preview mode)
+   - Submit answers
+   
+   Then via API:
+   - Try mod_quiz_get_quizzes_by_courses
+   - Try mod_quiz_get_quiz_attempts
+   - Try to read quiz data
+   
+6. 👥 TEST USER MANAGEMENT
+   Via GUI:
+   - Check enrolled users
+   - Note user IDs and roles
+   
+   Then via API:
+   - Try core_enrol_get_enrolled_users
+   - Try core_user_get_course_user_profiles

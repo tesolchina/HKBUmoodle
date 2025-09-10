@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Week 1",
+    "section": 1,
+    "modules": [
+      {
+        "id": 1,
+        "name": "Course Introduction",
+        "modname": "page",
+        "url": "https://mock.hkbu.edu.hk/mod/page/view.php?id=1"
+      },
+      {
+        "id": 2,
+        "name": "Discussion Forum",
+        "modname": "forum",
+        "url": "https://mock.hkbu.edu.hk/mod/forum/view.php?id=2"
+      }
+    ],
+    "offline_mode": true
+  }
+]

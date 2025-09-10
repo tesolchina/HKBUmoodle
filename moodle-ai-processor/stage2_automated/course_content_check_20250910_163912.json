@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-09-10T16:39:12.430961",
+  "course_id": 99,
+  "sections": [
+    {
+      "id": 470,
+      "name": "General",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 0,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": [
+        {
+          "id": 94,
+          "url": "https://moddw12-buelearning.hkbu.edu.hk/mod/forum/view.php?id=94",
+          "name": "Announcements",
+          "instance": 94,
+          "contextid": 216,
+          "visible": 1,
+          "uservisible": true,
+          "visibleoncoursepage": 1,
+          "modicon": "https://moddw12-buelearning.hkbu.edu.hk/theme/image.php/boost/forum/1741832143/monologo?filtericon=1",
+          "modname": "forum",
+          "modplural": "Forums",
+          "availability": null,
+          "indent": 0,
+          "onclick": "",
+          "afterlink": null,
+          "activitybadge": [],
+          "customdata": "\"\"",
+          "noviewlink": false,
+          "completion": 0,
+          "downloadcontent": 1,
+          "dates": [],
+          "groupmode": 0
+        }
+      ]
+    },
+    {
+      "id": 471,
+      "name": "Topic 1",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 1,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    },
+    {
+      "id": 472,
+      "name": "Topic 2",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 2,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    },
+    {
+      "id": 473,
+      "name": "Topic 3",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 3,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    },
+    {
+      "id": 474,
+      "name": "Topic 4",
+      "visible": 1,
+      "summary": "",
+      "summaryformat": 1,
+      "section": 4,
+      "hiddenbynumsections": 0,
+      "uservisible": true,
+      "modules": []
+    }
+  ],
+  "summary": {
+    "total_sections": 5,
+    "total_modules": 1,
+    "module_types": {
+      "forum": 1
+    }
+  }
+}
